@@ -23,7 +23,7 @@
     <ClInclude Include="LoketForm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ambilAntre.h">
+    <ClInclude Include="buttonForm2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="buttonForm1.h">

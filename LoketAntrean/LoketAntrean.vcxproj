@@ -123,7 +123,7 @@
     <ClCompile Include="LoketForm.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ambilAntre.h">
+    <ClInclude Include="buttonForm2.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="buttonForm1.h">
@@ -134,8 +134,8 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ambilAntre.resx">
-      <DependentUpon>ambilAntre.h</DependentUpon>
+    <EmbeddedResource Include="buttonForm2.resx">
+      <DependentUpon>buttonForm2.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="buttonForm1.resx">
       <DependentUpon>buttonForm1.h</DependentUpon>

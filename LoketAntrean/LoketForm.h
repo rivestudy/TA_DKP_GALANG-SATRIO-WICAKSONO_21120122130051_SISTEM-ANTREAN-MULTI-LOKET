@@ -1,6 +1,8 @@
-#pragma once
 
 #include <string>
+
+#pragma once
+
 
 namespace LoketAPP {
 
@@ -14,18 +16,18 @@ namespace LoketAPP {
     public ref class LoketAntreanForm : public System::Windows::Forms::Form
     {
     private:
-        Queue<int>^ q1;
-        Queue<int>^ q2;
-        Queue<int>^ q3;
+        System::Collections::Generic::Queue<int>^ q1;
+        System::Collections::Generic::Queue<int>^ q2;
+        System::Collections::Generic::Queue<int>^ q3;
 
 
     public:
         LoketAntreanForm(void)
         {
             InitializeComponent();
-            q1 = gcnew Queue<int>();
-            q2 = gcnew Queue<int>();
-            q3 = gcnew Queue<int>();
+            q1 = gcnew System::Collections::Generic::Queue<int>();
+            q2 = gcnew System::Collections::Generic::Queue<int>();
+            q3 = gcnew System::Collections::Generic::Queue<int>();
         }
 
         void UpdateA(int value)
@@ -81,7 +83,7 @@ namespace LoketAPP {
         }
         int ekorA()
         {
-            Queue<int>^ tempq1 = gcnew Queue<int>(q1); 
+            System::Collections::Generic::Queue<int>^ tempq1 = gcnew System::Collections::Generic::Queue<int>(q1);
 
             int ekorValA;
             while (tempq1->Count > 0)
@@ -104,7 +106,7 @@ namespace LoketAPP {
         }
         int ekorB()
         {
-            Queue<int>^ tempq2 = gcnew Queue<int>(q2);
+            System::Collections::Generic::Queue<int>^ tempq2 = gcnew System::Collections::Generic::Queue<int>(q2);
 
             int ekorValB;
             while (tempq2->Count > 0)
@@ -116,7 +118,7 @@ namespace LoketAPP {
         }
         void DisplayC()
         {
-            String^ frontC = q3->Count > 0 ? q2->Peek().ToString() : "-";
+            String^ frontC = q3->Count > 0 ? q3->Peek().ToString() : "-";
             String^ endC = q3->Count > 0 ? ekorC().ToString() : "-";
             String^ lengthC = q3->Count.ToString();
 
@@ -127,7 +129,7 @@ namespace LoketAPP {
         }
         int ekorC()
         {
-            Queue<int>^ tempq3 = gcnew Queue<int>(q3);
+            System::Collections::Generic::Queue<int>^ tempq3 = gcnew System::Collections::Generic::Queue<int>(q3);
 
             int ekorValC;
             while (tempq3->Count > 0)
@@ -499,10 +501,10 @@ namespace LoketAPP {
             // LoketAntreanForm
             // 
             this->BackColor = System::Drawing::SystemColors::ActiveCaption;
-            this->ClientSize = System::Drawing::Size(1062, 596);
+            this->ClientSize = System::Drawing::Size(1044, 573);
             this->Controls->Add(this->panel1);
-            this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
-            this->MaximumSize = System::Drawing::Size(1062, 596);
+            this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedToolWindow;
+            this->MaximumSize = System::Drawing::Size(1062, 620);
             this->Name = L"LoketAntreanForm";
             this->StartPosition = System::Windows::Forms::FormStartPosition::WindowsDefaultBounds;
             this->Load += gcnew System::EventHandler(this, &LoketAntreanForm::QueueCounterForm_Load);
@@ -521,29 +523,18 @@ private: System::Windows::Forms::Label^ label1;
 private: System::Windows::Forms::Panel^ panel2;
 private: System::Windows::Forms::Label^ akhirA;
 private: System::Windows::Forms::Label^ angkaAntriC;
-
-
 private: System::Windows::Forms::Label^ angkaAntriB;
-
 private: System::Windows::Forms::Panel^ panel3;
 private: System::Windows::Forms::Label^ panjangC;
-
 private: System::Windows::Forms::Label^ panjangB;
-
 private: System::Windows::Forms::Label^ panjangA;
-
 private: System::Windows::Forms::Label^ akhirC;
 private: System::Windows::Forms::Label^ akhirB;
 private: System::Windows::Forms::Label^ angkaPanjangC;
-
 private: System::Windows::Forms::Label^ angkaPanjangB;
-
 private: System::Windows::Forms::Label^ angkaPanjangA;
 private: System::Windows::Forms::Label^ angkaBaruC;
-
-
 private: System::Windows::Forms::Label^ angkaBaruB;
-
 private: System::Windows::Forms::Label^ angkaBaruA;
 
 
