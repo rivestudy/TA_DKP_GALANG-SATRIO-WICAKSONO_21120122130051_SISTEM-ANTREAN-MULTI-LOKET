@@ -27,23 +27,26 @@ namespace LoketAPP {
 
 
 
-
-
-           int currentValue; // Keep track of the current value
+           int currentValueA;
+           int currentValueB;
+           int currentValueC; // Keep track of the current value
 
     public:
         ButtonForm(LoketAntreanForm^ queueCounterForm)
         {
             InitializeComponent();
             this->queueCounterForm = queueCounterForm;
-            this->currentValue = 1; // Initialize current value to 1
+            this->currentValueA = 1;
+            this->currentValueB = 1;
+            this->currentValueC = 1;
+            // Initialize current value to 1
         }
 
     private:
         System::Void enqueueButton_Click(System::Object^ sender, System::EventArgs^ e)
         {
-            queueCounterForm->UpdateA(currentValue); // Enqueue the current value
-            currentValue++; // Increment the current value
+            queueCounterForm->UpdateA(currentValueA); // Enqueue the current value
+            currentValueA++; // Increment the current value
         }
 
         System::Void dequeueButton_Click(System::Object^ sender, System::EventArgs^ e)
@@ -104,6 +107,7 @@ namespace LoketAPP {
             this->buttonAmbil3->TabIndex = 10;
             this->buttonAmbil3->Text = L"Ambil Antrian Loket C";
             this->buttonAmbil3->UseVisualStyleBackColor = true;
+            this->buttonAmbil3->Click += gcnew System::EventHandler(this, &ButtonForm::buttonAmbil3_Click_1);
             // 
             // label3
             // 
@@ -126,6 +130,7 @@ namespace LoketAPP {
             this->buttonAmbil2->TabIndex = 9;
             this->buttonAmbil2->Text = L"Ambil Antrian Loket B";
             this->buttonAmbil2->UseVisualStyleBackColor = true;
+            this->buttonAmbil2->Click += gcnew System::EventHandler(this, &ButtonForm::buttonAmbil2_Click);
             // 
             // label2
             // 
@@ -148,6 +153,7 @@ namespace LoketAPP {
             this->buttonAmbil1->TabIndex = 8;
             this->buttonAmbil1->Text = L"Ambil Antrian Loket A";
             this->buttonAmbil1->UseVisualStyleBackColor = true;
+            this->buttonAmbil1->Click += gcnew System::EventHandler(this, &ButtonForm::buttonAmbil1_Click);
             // 
             // label1
             // 
@@ -204,5 +210,17 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
     }
 private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
     }
+private: System::Void buttonAmbil1_Click(System::Object^ sender, System::EventArgs^ e) {
+    queueCounterForm->UpdateA(currentValueA); // Enqueue the current value
+    currentValueA++; // Increment the current value
+}
+private: System::Void buttonAmbil2_Click(System::Object^ sender, System::EventArgs^ e) {
+    queueCounterForm->UpdateB(currentValueB); // Enqueue the current value
+    currentValueB++; // Increment the current value
+}
+private: System::Void buttonAmbil3_Click_1(System::Object^ sender, System::EventArgs^ e) {
+    queueCounterForm->UpdateC(currentValueC); // Enqueue the current value
+    currentValueC++; // Increment the current value
+}
 };
 }
