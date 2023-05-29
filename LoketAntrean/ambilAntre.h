@@ -1,7 +1,7 @@
 #pragma once
-#include "QueueCounterForm.h"
+#include "LoketForm.h"
 
-namespace LoketAntrean {
+namespace LoketAPP {
 
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -15,30 +15,39 @@ namespace LoketAntrean {
 	/// </summary>
 	public ref class ambilAntre : public System::Windows::Forms::Form
 	{
+	private:
+		LoketAntreanForm^ queueCounterForm;
+		int currentValue1; // Keep track of the current value
+		int currentValue2;
+		int currentValue3;
+
 	public:
-		ambilAntre(void)
+		ambilAntre(LoketAntreanForm^ queueCounterForm)
 		{
 			InitializeComponent();
-			//
-			//TODO: Add the constructor code here
-			//
+			this->queueCounterForm = queueCounterForm;
+			this->currentValue1 = 0; // Initialize current value to 1
 		}
 
-	protected:
-		/// <summary>
-		/// Clean up any resources being used.
-		/// </summary>
-		~ambilAntre()
+	private:
+		System::Void buttonAmbil1_Click(System::Object^ sender, System::EventArgs^ e)
 		{
-			if (components)
-			{
-				delete components;
-			}
+			queueCounterForm->UpdateA(currentValue1); // Enqueue the current value
+			currentValue1++; // Increment the current value
+		}
+
+		System::Void buttonAmbil2_Click(System::Object^ sender, System::EventArgs^ e)
+		{
+			queueCounterForm->UpdateB(currentValue2); // Enqueue the current value
+			currentValue2++; // Increment the current value
+		}
+
+		System::Void buttonAmbil3_Click(System::Object^ sender, System::EventArgs^ e)
+		{
+			queueCounterForm->UpdateC(currentValue2); // Enqueue the current value
+			currentValue++; // Increment the current value
 		}
 	private: System::Windows::Forms::Button^ buttonAmbil1;
-	protected:
-
-	protected:
 	private: System::Windows::Forms::Button^ buttonAmbil2;
 	private: System::Windows::Forms::Button^ buttonAmbil3;
 	private: System::Windows::Forms::Label^ labelAmbil;
@@ -100,6 +109,7 @@ namespace LoketAntrean {
 			this->buttonAmbil3->TabIndex = 2;
 			this->buttonAmbil3->Text = L"Ambil Antrian Loket C";
 			this->buttonAmbil3->UseVisualStyleBackColor = true;
+			this->buttonAmbil3->Click += gcnew System::EventHandler(this, &ambilAntre::buttonAmbil3_Click);
 			// 
 			// labelAmbil
 			// 
@@ -189,5 +199,7 @@ namespace LoketAntrean {
 	}
 	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
+private: System::Void buttonAmbil3_Click(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }

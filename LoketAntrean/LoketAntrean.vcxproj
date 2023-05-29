@@ -120,18 +120,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ambilAntre.cpp" />
-    <ClCompile Include="ButtonForm.cpp" />
-    <ClCompile Include="MyForm.cpp" />
+    <ClCompile Include="LoketForm.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ambilAntre.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="ButtonForm.h">
+    <ClInclude Include="buttonForm1.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="QueueCounterForm.h">
+    <ClInclude Include="LoketForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
@@ -139,11 +137,11 @@
     <EmbeddedResource Include="ambilAntre.resx">
       <DependentUpon>ambilAntre.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ButtonForm.resx">
-      <DependentUpon>ButtonForm.h</DependentUpon>
+    <EmbeddedResource Include="buttonForm1.resx">
+      <DependentUpon>buttonForm1.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QueueCounterForm.resx">
-      <DependentUpon>QueueCounterForm.h</DependentUpon>
+    <EmbeddedResource Include="LoketForm.resx">
+      <DependentUpon>LoketForm.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -1,5 +1,5 @@
-#include "QueueCounterForm.h"
-#include "ButtonForm.h"
+#include "LoketForm.h"
+#include "ButtonForm1.h"
 #include <Windows.h>
 
 using namespace System;
@@ -11,8 +11,8 @@ int main(array<System::String^>^ args)
     Application::EnableVisualStyles();
     Application::SetCompatibleTextRenderingDefault(false);
 
-    QueueCounterApp::QueueCounterForm queueCounterForm;
-    QueueCounterApp::ButtonForm buttonForm(% queueCounterForm);
+    LoketAPP::LoketAntreanForm queueCounterForm;
+    LoketAPP::ButtonForm buttonForm(% queueCounterForm);
 
     queueCounterForm.Show();
     buttonForm.Show();

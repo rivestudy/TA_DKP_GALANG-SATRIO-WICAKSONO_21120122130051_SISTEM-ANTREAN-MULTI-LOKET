@@ -15,24 +15,18 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MyForm.cpp">
-      <Filter>Header Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ButtonForm.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ambilAntre.cpp">
+    <ClCompile Include="LoketForm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="QueueCounterForm.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ButtonForm.h">
+    <ClInclude Include="LoketForm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ambilAntre.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="buttonForm1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
