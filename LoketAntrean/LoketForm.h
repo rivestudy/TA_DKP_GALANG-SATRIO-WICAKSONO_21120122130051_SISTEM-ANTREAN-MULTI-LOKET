@@ -20,7 +20,6 @@ namespace LoketAPP {
         System::Collections::Generic::Queue<int>^ q2;
         System::Collections::Generic::Queue<int>^ q3;
 
-
     public:
         LoketAntreanForm(void)
         {

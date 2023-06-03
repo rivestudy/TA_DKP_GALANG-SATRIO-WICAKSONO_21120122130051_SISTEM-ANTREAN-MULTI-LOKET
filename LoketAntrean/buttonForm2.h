@@ -15,17 +15,13 @@ namespace LoketAPP {
 	/// </summary>
 	public ref class lanjutAntre : public System::Windows::Forms::Form
 	{
-	private:
-		LoketAntreanForm^ LoketForm;
+	private: LoketAntreanForm^ LoketForm;
 	private: System::Windows::Forms::Panel^ bottomPanel;
 	private: System::Windows::Forms::Button^ buttonLanjut3;
-
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::Button^ buttonLanjut2;
-
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Button^ buttonLanjut1;
-
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ labelLanjut;
 
@@ -37,8 +33,6 @@ namespace LoketAPP {
 			InitializeComponent();
 			this->LoketForm = queueCounterForm;
 		}
-
-
 
 	private:
 		/// <summary>
@@ -179,7 +173,6 @@ namespace LoketAPP {
 	private: System::Void ambilAntre_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 	
-
 private: System::Void buttonLanjut1_Click_1(System::Object^ sender, System::EventArgs^ e) {
 	LoketForm->SelesaiA();
 }

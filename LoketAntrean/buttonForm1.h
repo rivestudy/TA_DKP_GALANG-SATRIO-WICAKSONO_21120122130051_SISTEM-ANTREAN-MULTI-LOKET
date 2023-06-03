@@ -12,7 +12,7 @@ namespace LoketAPP {
     public ref class ButtonForm : public System::Windows::Forms::Form
     {
     private:
-        LoketAntreanForm^ queueCounterForm;
+        LoketAntreanForm^ loketForms;
     private: System::Windows::Forms::Panel^ bottomPanel;
     private: System::Windows::Forms::Button^ buttonAmbil3;
     private: System::Windows::Forms::Label^ label3;
@@ -22,33 +22,21 @@ namespace LoketAPP {
     private: System::Windows::Forms::Label^ label1;
     private: System::Windows::Forms::Label^ labelAmbil;
 
+    private:
            int currentValueA;
            int currentValueB;
            int currentValueC; 
 
     public:
-        ButtonForm(LoketAntreanForm^ queueCounterForm)
+        ButtonForm(LoketAntreanForm^ loketForms)
         {
             InitializeComponent();
-            this->queueCounterForm = queueCounterForm;
+            this->loketForms = loketForms;
             this->currentValueA = 1;
             this->currentValueB = 1;
             this->currentValueC = 1;
            
         }
-
-    private:
-        System::Void enqueueButton_Click(System::Object^ sender, System::EventArgs^ e)
-        {
-            queueCounterForm->UpdateA(currentValueA); 
-            currentValueA++; 
-        }
-
-        System::Void dequeueButton_Click(System::Object^ sender, System::EventArgs^ e)
-        {
-            queueCounterForm->SelesaiA();
-        }
-
 #pragma region Windows Form Designer generated code
         void InitializeComponent()
         {
@@ -172,20 +160,16 @@ namespace LoketAPP {
         }
 #pragma endregion
 
-    private:
-
-
-
 private: System::Void buttonAmbil1_Click(System::Object^ sender, System::EventArgs^ e) {
-    queueCounterForm->UpdateA(currentValueA); 
+    loketForms->UpdateA(currentValueA); 
     currentValueA++; 
 }
 private: System::Void buttonAmbil2_Click(System::Object^ sender, System::EventArgs^ e) {
-    queueCounterForm->UpdateB(currentValueB); 
+    loketForms->UpdateB(currentValueB); 
     currentValueB++; 
 }
 private: System::Void buttonAmbil3_Click_1(System::Object^ sender, System::EventArgs^ e) {
-    queueCounterForm->UpdateC(currentValueC); 
+    loketForms->UpdateC(currentValueC); 
     currentValueC++; 
 }
 };
